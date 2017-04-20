@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base ./dist --port 9966 --hot"
+    "start": "webpack-dev-server --content-base ./dist --port 9966 --hot",
+    "build": "webpack"
   },
   "author": "Orkhan Jafarov",
   "license": "ISC",
@@ -29,11 +30,9 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
-    "axios": "^0.16.0",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-redux": "4.4.5",
-    "redux": "^3.6.0"
+    "react-redux": "4.4.5"
   }
 }

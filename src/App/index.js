@@ -35,11 +35,11 @@ export default class App extends Component {
 
   /**
  * componentDidMount
- * @property {object} fetching fetching data into state
+ * fetching data into state
  */
 
   componentDidMount () {
-    fetch(this.props.dataUrl)
+    fetch('/data.json')
       .then(res => res.json())
       .then(result => {
         this.setState({

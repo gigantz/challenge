@@ -10114,13 +10114,13 @@ var App = function (_Component) {
 
     /**
     * componentDidMount
-    * @property {object} fetching fetching data into state
+    * fetching data into state
     */
 
     value: function componentDidMount() {
       var _this2 = this;
 
-      fetch(this.props.dataUrl).then(function (res) {
+      fetch('/data.json').then(function (res) {
         return res.json();
       }).then(function (result) {
         _this2.setState(_extends({
@@ -10802,7 +10802,7 @@ var _reactDom = __webpack_require__(84);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _reactDom.render)(_react2.default.createElement(_App2.default, { dataUrl: '/data.json' }), document.getElementById('root'));
+(0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
 
 /***/ }),
 /* 95 */
