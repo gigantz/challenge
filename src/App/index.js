@@ -24,15 +24,6 @@ export default class App extends Component {
     }
   }
 
-/**
- * propTypes
- * @property {string} editable data url
- */
-
-  static propTypes = {
-    dataUrl: PropTypes.string.isRequired
-  }
-
   /**
  * componentDidMount
  * fetching data into state

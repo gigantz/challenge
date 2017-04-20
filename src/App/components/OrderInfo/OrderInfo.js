@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 
 /**
 *  Info about order
@@ -32,7 +33,7 @@ export default class OrderInfo extends Component {
           <b>Door</b> {door}
         </div>
         <div className='order-info__om'>
-          <b>Om</b> {datetime}
+          <b>Om</b> {moment(datetime).format('hh:mm (YYYY-MM-DD)')}
         </div>
       </div>
     )

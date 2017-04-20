@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 
 /**
 *  Info about customer
@@ -24,14 +25,14 @@ export default class CustomerInfo extends Component {
     const { email, phone, datetime } = this.props
 
     return (
-      <div className="customer-info">
-        <div className="customer-info__datetime">
-          <b>Assigned at:</b> {datetime}
+      <div className='customer-info'>
+        <div className='customer-info__datetime'>
+          <b>Assigned at:</b> {moment(datetime).format('hh:mm (YYYY-MM-DD)')}
         </div>
-        <div className="customer-info__email">
+        <div className='customer-info__email'>
           <b>Email:</b> {email}
         </div>
-        <div className="customer-info__phone">
+        <div className='customer-info__phone'>
           <b>Phone:</b> {phone}
         </div>
       </div>
