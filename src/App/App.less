@@ -1,0 +1,144 @@
+@grey : #CCC;
+  @lightGrey : #F1F1F1;
+@main : #f47333;
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+.app__main > div {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px @lightGrey solid;
+
+  &__maintitle {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  &__subtitle {
+    color: @grey;
+  }
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 10px;
+
+  &__subtitle {
+    color: @grey;
+  }
+}
+
+.order-info {
+  background-color: @lightGrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+
+  b {
+    width: 100%;
+    display: block;
+  }
+}
+
+.ordered-items {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  &__ordered-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 14px;
+    border-bottom: 1px @lightGrey solid;
+  }
+
+  .ordered-item {
+    &__list {
+      width: 65px;
+      flex-shrink: 0;
+    }
+
+    &__image {
+      width: 100px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    &__info {
+      width: 60%;
+
+      &__name {
+        font-weight: bold;
+        font-size: 1.4em;
+      }
+
+      &__description {
+        color: @grey;
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+
+
+  input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 17px;
+     visibility: hidden;
+}
+
+
+input[type=checkbox]:after {
+    content: " ";
+    background-color: #fff;
+    display: inline-block;
+    margin-left:10px;
+    padding-bottom:5px;
+    color:@main;
+    width:25px;
+    height:25px;
+    visibility: visible;
+    border:2px solid @main;
+    padding-left:3px;
+}
+input[type=checkbox]:checked:after {
+    content: "\2713";
+    font-weight:bold;
+    position: relative;
+    font-size: 22px;
+    padding-left: 4px;
+    line-height: 30px;
+    color: white;
+    background-color: @main;
+}
